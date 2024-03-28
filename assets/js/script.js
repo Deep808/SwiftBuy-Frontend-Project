@@ -120,3 +120,30 @@ const sliderInit = function (currentSlider) {
 for (let i = 0, len = sliders.length; i < len; i++) {
   sliderInit(sliders[i]);
 }
+
+/**
+ * ACCORDION
+ */
+
+const accordions = document.querySelectorAll("[data-accordion]");
+
+let lastActiveAccordion;
+
+const accordionInit = function (currentAccordion) {
+  const accordionBtn = currentAccordion.querySelector("[data-accordion-btn]");
+
+  accordionBtn.addEventListener("click", function () {
+    if (currentAccordion.classList.contains("active")) {
+      currentAccordion.classList.toggle("active");
+    } else {
+      if (lastActiveAccordion) lastActiveAccordion.classList.remove("active");
+      currentAccordion.classList.add("active");
+    }
+
+    lastActiveAccordion = currentAccordion;
+  });
+};
+
+for (let i = 0, len = accordions.length; i < len; i++) {
+  accordionInit(accordions[i]);
+}
