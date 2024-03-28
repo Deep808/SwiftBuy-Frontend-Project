@@ -31,3 +31,30 @@ const activeElementOnScroll = function () {
 };
 
 window.addEventListener("scroll", activeElementOnScroll);
+
+/**
+ * SLIDER
+ */
+
+const sliders = document.querySelectorAll("[data-slider]");
+
+const sliderInit = function (currentSlider) {
+  const sliderContainer = currentSlider.querySelector(
+    "[data-slider-container]"
+  );
+  const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
+  const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
+
+  const totalSliderVisibleItems = Number(
+    getComputedStyle(currentSlider).getPropertyValue("--slider-item")
+  );
+  const totalSliderItems =
+    sliderContainer.childElementCount - totalSliderVisibleItems;
+
+  let currentSlidePos = 0;
+
+  const moveSliderItem = function () {
+    sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
+  };
+
+ 
