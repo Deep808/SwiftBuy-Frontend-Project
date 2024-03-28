@@ -74,3 +74,49 @@ const sliderInit = function (currentSlider) {
 
   sliderNextBtn.addEventListener("click", slideNext);
 
+  /**
+   * PREVIOUS SLIDE
+   */
+  const slidePrev = function () {
+    if (currentSlidePos <= 0) {
+      currentSlidePos = totalSliderItems;
+    } else {
+      currentSlidePos--;
+    }
+
+    moveSliderItem();
+  };
+
+  sliderPrevBtn.addEventListener("click", slidePrev);
+
+  const dontHaveExtraItem = totalSliderItems <= 0;
+  if (dontHaveExtraItem) {
+    sliderNextBtn.setAttribute("disabled", "");
+    sliderPrevBtn.setAttribute("disabled", "");
+  }
+
+  /**
+   * AUTO SLIDE
+   */
+
+  let autoSlideInterval;
+
+  const startAutoSlide = () =>
+    (autoSlideInterval = setInterval(slideNext, 3000));
+  startAutoSlide();
+  const stopAutoSlide = () => clearInterval(autoSlideInterval);
+
+  currentSlider.addEventListener("mouseover", stopAutoSlide);
+
+  currentSlider.addEventListener("mouseout", startAutoSlide);
+
+  /**
+   * RESPONSIVE
+   */
+
+  window.addEventListener("resize", moveSliderItem);
+};
+
+for (let i = 0, len = sliders.length; i < len; i++) {
+  sliderInit(sliders[i]);
+}
