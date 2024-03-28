@@ -57,4 +57,20 @@ const sliderInit = function (currentSlider) {
     sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
   };
 
- 
+  /**
+   * NEXT SLIDE
+   */
+  const slideNext = function () {
+    const slideEnd = currentSlidePos >= totalSliderItems;
+
+    if (slideEnd) {
+      currentSlidePos = 0;
+    } else {
+      currentSlidePos++;
+    }
+
+    moveSliderItem();
+  };
+
+  sliderNextBtn.addEventListener("click", slideNext);
+
