@@ -1,0 +1,12 @@
+:root {
+    /** 
+     * typography
+     */
+  
+    --ff-urbanist: "Urbanist", sans-serif;
+  }
+  
+  body {
+    font-family: var(--ff-urbanist);
+  }
+  
