@@ -36,15 +36,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateCurrentStep() {
+        console.log(currentStep);
+
         const currentInputs = steps[currentStep].querySelectorAll("input[required]");
+        let isValid = true;
+    
         for (let input of currentInputs) {
             if (!input.value.trim()) {
                 alert("Please fill in all required fields.");
-                return false;
+                isValid = false;
+                break;
             }
         }
-        return true;
+    
+        // Email validation for the first step or whenever your email input is present
+        if(isValid && currentStep === 0) { 
+            const emailInput = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                alert("Please enter a valid email address.");
+                isValid = false;
+            }
+        }
+    
+    
+        return isValid;
     }
+    
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -52,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById('email').value;
         const firstName = document.getElementById('first-name').value;
         const lastName = document.getElementById('last-name').value;
-        const password = document.getElementById('password').value; // For demo only, not secure
+        const password = document.getElementById('password').value; 
     
         // Storing user info in Local Storage
         const userInfo = { email, firstName, lastName, password }; // Not secure for real applications
