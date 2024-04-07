@@ -6,9 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentStep = 0;
 
     function updateProgressBar() {
-       
         const progress = currentStep * progressBarWidth;
         progressBar.style.width = progress + "%";
-      }
-      
+    }
+
+    function goToNextStep() {
+        // Performing validation before proceeding to the next step
+        if (validateCurrentStep()) {
+            currentStep++;
+            showStep(currentStep);
+            progressBar.classList.add("fill-animation"); 
+        }
+    }
+    
+    function goToPrevStep() {
+        currentStep--;
+        showStep(currentStep);
+    }
+    
 });
