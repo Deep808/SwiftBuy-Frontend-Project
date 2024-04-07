@@ -64,5 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = 'index.html';
       });
     
+    document.querySelectorAll(".next-btn").forEach((button) => {
+        button.addEventListener("click", goToNextStep);
+    });
+    
+    document.querySelectorAll(".prev-btn").forEach((button) => {
+        button.addEventListener("click", goToPrevStep);
+    });
+    
     
 });
