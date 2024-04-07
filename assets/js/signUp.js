@@ -34,5 +34,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         updateProgressBar();
     }
+
+    function validateCurrentStep() {
+        const currentInputs = steps[currentStep].querySelectorAll("input[required]");
+        for (let input of currentInputs) {
+            if (!input.value.trim()) {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+        }
+        return true;
+    }
+    
     
 });
