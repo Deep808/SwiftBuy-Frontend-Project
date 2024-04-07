@@ -71,6 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const firstName = document.getElementById('first-name').value;
         const lastName = document.getElementById('last-name').value;
         const password = document.getElementById('password').value; 
+        const confirmPassword = document.getElementById('confirm-password').value;
+    
+        // Check password match right before form submission
+        if (password.trim() !== confirmPassword.trim()) {
+            alert("Passwords do not match.");
+            return; // Preventing form submission
+        }
     
         // Storing user info in Local Storage
         const userInfo = { email, firstName, lastName, password }; // Not secure for real applications
