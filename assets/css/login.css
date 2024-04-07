@@ -100,3 +100,10 @@ input,
       width: 100%;
     }
   }
+
+  @media only screen and (min-width: 375px) {
+    .step {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
