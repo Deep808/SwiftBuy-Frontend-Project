@@ -84,6 +84,19 @@
     width: 80%;
   }
   
- 
-
+  .progress-bar {
+    margin-top: 1.5em;
+    height: 5px;
+    background-color: greenyellow;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-bar-filled {
+    height: 100%;
+    background-color: #4caf50;
+  }
+  
   
