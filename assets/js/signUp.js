@@ -45,6 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return true;
     }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Extracting user info from form fields
+        const email = document.getElementById('email').value;
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const password = document.getElementById('password').value; // For demo only, not secure
+    
+        // Storing user info in Local Storage
+        const userInfo = { email, firstName, lastName, password }; // Not secure for real applications
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    
+        alert("Signup successful!");
+    
+        // Redirecting to login page or dashboard page
+        window.location.href = 'index.html';
+      });
     
     
 });
