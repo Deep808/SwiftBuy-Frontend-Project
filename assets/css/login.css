@@ -9,4 +9,30 @@
   body {
     font-family: var(--ff-urbanist);
   }
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+  }
+  
+  .next-button > .next-btn {
+    float: right;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+  }
+  
+  .gender-wrapper {
+    display: flex;
+    width: 14.5em;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button:hover {
+    color: rgb(26, 206, 41);
+  }
   
