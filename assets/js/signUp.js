@@ -71,6 +71,5 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".prev-btn").forEach((button) => {
         button.addEventListener("click", goToPrevStep);
     });
-    
-    
+    showStep(currentStep);
 });
