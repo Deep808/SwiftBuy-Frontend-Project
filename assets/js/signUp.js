@@ -24,4 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
         showStep(currentStep);
     }
     
+    function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+            if (index === stepIndex) {
+                step.style.display = "block";
+            } else {
+                step.style.display = "none";
+            }
+        });
+        updateProgressBar();
+    }
+    
 });
