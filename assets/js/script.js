@@ -121,6 +121,22 @@ for (let i = 0, len = sliders.length; i < len; i++) {
   sliderInit(sliders[i]);
 }
 
+/**  ADD TO CART QUERY */
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all buttons with the class "btn-primary"
+  var addToCartButtons = document.querySelectorAll(".btn-primary");
+
+  // Add click event listener to each button
+  addToCartButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Handle the click event for each button here
+      console.log("Add to cart button clicked");
+      // You can perform additional actions here, such as adding the item to the shopping cart
+    });
+  });
+});
+
 /**
  * ACCORDION
  */

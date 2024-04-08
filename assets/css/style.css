@@ -251,6 +251,10 @@ ion-icon {
   font-weight: var(--fw-600);
 }
 
+#icon-add:hover {
+  color: #ffffff;
+}
+
 .btn-icon {
   width: 39px;
   height: 39px;
@@ -437,7 +441,7 @@ ion-icon {
 
 .hero {
   position: relative;
-  --section-padding: 180px 64px;
+  --section-padding: 15em 1em;
   text-align: center;
 }
 
