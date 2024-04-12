@@ -44,6 +44,7 @@
   #first-name,
   #last-name,
   #password,
+  #confirm-password,
   #male,
   #female {
     padding: 0.9em;

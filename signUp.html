@@ -43,12 +43,20 @@
                     name="email"
                     id="email"
                   />
+                  <!-- <input
+                    placeholder="Birth Date:"
+                    required
+                    type="date"
+                    name="birth-date"
+                    id="birth-date"
+                  /> -->
                   <input
                     placeholder="Birth Date:"
                     required
                     type="date"
                     name="birth-date"
                     id="birth-date"
+                    max="${new Date().toISOString().split('T')[0]}"
                   />
                   <div class="next-button">
                     <button class="next-btn" type="button">Next</button>
@@ -105,7 +113,7 @@
                     id="confirm-password"
                   />
                   <div class="flex justify-center items-center text-center">
-                    <input class="w-[20%]" type="checkbox" name="checkbox" />
+                    <input class="w-[20%]" type="checkbox" name="checkbox" id="terms-checkbox" />
                     <p class="text-[0.8em] mx-auto w-[100%]">
                       By checking you are agree to our nft marketplace.
                     </p>
