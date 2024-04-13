@@ -26,7 +26,6 @@
           Image by: <a href="https://www.instagram.com/13_imperial/"><span class="font-bold">@13imperial</span></a>
         </p>
       </div>
-
       <div class="w-auto min-[375px]:w-[95%] min-[375px]:mx-auto md:w-[80%] lg:w-[45%] lg:my-auto lg:mx-0 my-auto">
         <h1 class="text-[2.5em] font-bold m-6 text-white text-center">
           Sign Up
@@ -43,12 +42,20 @@
                     name="email"
                     id="email"
                   />
+                  <!-- <input
+                    placeholder="Birth Date:"
+                    required
+                    type="date"
+                    name="birth-date"
+                    id="birth-date"
+                  /> -->
                   <input
                     placeholder="Birth Date:"
                     required
                     type="date"
                     name="birth-date"
                     id="birth-date"
+                    max="${new Date().toISOString().split('T')[0]}"
                   />
                   <div class="next-button">
                     <button class="next-btn" type="button">Next</button>
@@ -104,13 +111,14 @@
                     name="confirm-password"
                     id="confirm-password"
                   />
-                  <div class="flex justify-center items-center text-center">
-                    <input class="w-[20%]" type="checkbox" name="checkbox" />
-                    <p class="text-[0.8em] mx-auto w-[100%]">
+                  
+                  <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="terms-checkbox" class="form-checkbox h-5 w-5 text-green-500" />
+                    <label for="terms-checkbox" class="text-sm text-white">
                       By checking you are agree to our nft marketplace.
-                    </p>
+                    </label>
                   </div>
-    
+                  
                   <div class="buttons">
                     <button class="prev-btn" type="button">Previous</button>
                     <button class="submit-btn" type="submit">Sign up</button>
