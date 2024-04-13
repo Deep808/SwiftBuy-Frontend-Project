@@ -124,6 +124,24 @@ for (let i = 0, len = sliders.length; i < len; i++) {
 /**  ADD TO CART QUERY */
 
 document.addEventListener("DOMContentLoaded", function () {
+  const navbarLoginLogoutButton = document.getElementById('navbar-login-logout');
+
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (currentUser) {
+    // Changing to Logout if a user is found
+    navbarLoginLogoutButton.setAttribute('href', '#');
+    navbarLoginLogoutButton.innerText = 'Logout';
+    navbarLoginLogoutButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      logout();
+    });
+  } else {
+    // Keeping as Login if no user is found
+    navbarLoginLogoutButton.setAttribute('href', './login.html');
+    navbarLoginLogoutButton.innerText = 'Login';
+  }
+
   // Select all buttons with the class "btn-primary"
   var addToCartButtons = document.querySelectorAll(".btn-primary");
 
@@ -162,4 +180,10 @@ const accordionInit = function (currentAccordion) {
 
 for (let i = 0, len = accordions.length; i < len; i++) {
   accordionInit(accordions[i]);
+}
+
+function logout() {
+  console.log("Logging out...");
+  localStorage.removeItem('currentUser'); // Remove user from storage
+  window.location.href = './index.html'; // Redirect to the homepage
 }
