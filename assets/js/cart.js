@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartItems = JSON.parse(localStorage.getItem(userCartKeys)) || [];
         
         const cartItemsContainer = document.getElementById('cartItemsContainer');
+        if (cartItemsContainer) {
         cartItemsContainer.innerHTML = ''; 
         const totalPriceElement = document.getElementById('totalPrice');
 
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update the total price
         totalPriceElement.textContent = `Total: ${total.toFixed(2)} ETH`;
+      }
     }
 
     function createCartItemElement(item, index) {
