@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const users = JSON.parse(localStorage.getItem('users')) || [];
       const user = users.find(u => u.email === email && u.password === password);
       if (user) {
-        localStorage.setItem('currentUser', JSON.stringify({ userId: user.userId }));
+        localStorage.setItem('currentUser', JSON.stringify(user));
         return true; // Login successful
       }
       return false; // Login failed
