@@ -67,10 +67,8 @@
             </li>
 
             <li>
-              <a href="./log-in.html" class="navbar-link label-lg link:hover"
-                >Login</a
-              >
-            </li>
+              <a href="./login.html" class="navbar-link label-lg link:hover" id="navbar-login-logout"></a>
+          </li>
           </ul>
         </nav>
 
@@ -140,7 +138,6 @@
       </div>
 
       <!-- CHECKOUT PROCEED  -->
-      <!-- <div id="hidecheckout"> -->
       <div
         class="hidecheckout p-6 w-full md:w-[80%] lg:w-[60%] bg-gray-100 bg-opacity-10 mt-8 rounded-md text-white"
       >
@@ -168,11 +165,11 @@
 
       <div class="hidecheckout mt-6 flex items-center w-[95%] mx-auto justify-center">
         <input
-          class="w-auto mr-4 text-gray-500"
-          type="checkbox"
-          name="agree"
-          id="agree"
-        />
+        class="w-auto mr-4 text-gray-500"
+        type="checkbox"
+        name="agree"
+        id="agree"
+      />
         <p class="text-sm">
           I authorize Swiftbuy to debit my account today for the specified
           amount and agree to their User Agreement.
@@ -180,11 +177,12 @@
       </div>
 
       <a
-        href="./checkOut.html"
-        class="hidecheckout bg-green-500 w-[45%] mx-auto text-center text-white px-6 py-4 font-bold my-6 rounded-md"
-      >
-        Proceed Checkout
-      </a>
+      href="./checkout.html"
+      id="proceedCheckout"
+      class="bg-green-500 w-[45%] mx-auto text-center text-white px-6 py-4 font-bold my-6 rounded-md"
+    >
+      Proceed Checkout
+    </a>
       </div>
     </main>
 
@@ -393,15 +391,15 @@
     - custom js link
   -->
     <script src="./assets/js/cart.js"></script>
-
+    <script src="./assets/js/script.js"></script>
     <!-- code for checking user is logged in than only can view cart page -->
     <script>
   
 
-      /*   if (!localStorage.getItem('currentUser')) {
+      if (!localStorage.getItem('currentUser')) {
             // If currentUser does not exist in local storage, redirect to the login page.
             window.location.href = 'login.html'; // Replace '/login' with the path to your login page.
-        } */
+        } 
 
       
       </script>

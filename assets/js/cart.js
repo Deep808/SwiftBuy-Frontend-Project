@@ -1,15 +1,12 @@
 function addToCart(button) {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-   /*  if (!currentUser) {
+    if (!currentUser) {
         window.location.href = 'login.html';
         return;
     }
-    */
-
    
     const cardElement = button.closest('.discover-card');
 
-  
     const itemName = cardElement.querySelector('h3 a').textContent;
     const imageElement = cardElement.querySelector('.card-banner img');
     const imageUrl = imageElement ? imageElement.src : '';
@@ -27,8 +24,8 @@ function addToCart(button) {
     };
 
     // Fetch the current user's cart from local storage
-    /* let userCartKey = currentUser.id + '_cart'; */
-    let userCartKey = 1 + '_cart'; 
+    let userCartKey = currentUser.userId + '_cart'; 
+  /*   let userCartKey = 1 + '_cart';  */
     let userCart = JSON.parse(localStorage.getItem(userCartKey)) || [];
 
     // Check if the item is already in the cart
@@ -49,16 +46,30 @@ function addToCart(button) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const userCartKey = 1 + '_cart'; 
-    displayCartItems();
+  
+  
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (!currentUser) {
+        const userCartKey = ""; 
+    } 
+    else{
+      
+        const userCartKey = currentUser.userId + '_cart'; 
+      
+        displayCartItems(userCartKey);
+    }
+  /*   const userCartKey = 1 + '_cart';  */
+   
 
-    function displayCartItems() {
-        const cartItems = JSON.parse(localStorage.getItem(userCartKey)) || [];
+    function displayCartItems(userCartKeys) {
+        const cartItems = JSON.parse(localStorage.getItem(userCartKeys)) || [];
+        
         const cartItemsContainer = document.getElementById('cartItemsContainer');
         cartItemsContainer.innerHTML = ''; 
         const totalPriceElement = document.getElementById('totalPrice');
 
         if (cartItems.length === 0) {
+        
             cartItemsContainer.textContent = 'Your cart is empty.';
             document.getElementById('emptyCartButton').style.display = 'none';
             document.querySelector('.hidecheckout').style.display = 'none';
@@ -127,10 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function deleteCartItem(index) {
-        let cartItems = JSON.parse(localStorage.getItem(userCartKey)) || [];
-        cartItems.splice(index, 1);
-        localStorage.setItem(userCartKey, JSON.stringify(cartItems));
-        displayCartItems(); // Refresh the cart display
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) {
+            const userCartKey = ""; 
+        } 
+        else{
+          
+            const userCartKey = currentUser.userId + '_cart'; 
+            let cartItems = JSON.parse(localStorage.getItem(userCartKey)) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem(userCartKey, JSON.stringify(cartItems));
+            displayCartItems(userCartKey); // Refresh the cart display
+          
+        }    
+       
     }
 });
 
@@ -138,19 +159,38 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const emptyCartButton = document.getElementById('emptyCartButton');
   
-    emptyCartButton.addEventListener('click', () => {
-      /* const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      if (!currentUser) {
-        console.log('No user is currently logged in.');
-        return;
-      } */
-      /* let userCartKey = currentUser.id + '_cart'; */
-      let userCartKey = 1 + '_cart';
-      localStorage.removeItem(userCartKey);
+   
+    if (emptyCartButton) {
+      emptyCartButton.addEventListener('click', () => {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) {
+          console.log('No user is currently logged in.');
+          return;
+        }
+        let userCartKey = currentUser.userId + '_cart';
+        localStorage.removeItem(userCartKey);
   
-      alert('Your cart has been emptied.');
+        alert('Your cart has been emptied.');
   
-      location.reload();
-    });
+        location.reload();
+      });
+    }
+  });
+  
+ document.addEventListener('DOMContentLoaded', () => {
+    const proceedCheckoutButton = document.getElementById('proceedCheckout');
+    
+    // Check if the proceedCheckout button exists
+    if (proceedCheckoutButton) {
+      const agreeCheckbox = document.getElementById('agree');
+      
+      proceedCheckoutButton.addEventListener('click', (event) => {
+        // Check if the agree checkbox is checked
+        if (!agreeCheckbox.checked) {
+          event.preventDefault();  // Stop the link from being followed
+          alert('Please check the agree box before proceeding to checkout.');
+        }
+      });
+    } 
   });
   
