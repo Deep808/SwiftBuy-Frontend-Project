@@ -131,7 +131,7 @@
         <hr class="mt-6 opacity-10" />
 
         <!-- CARDS  -->
-      <div id="cartItemsContainer">
+      <div class="text-center my-12 text-xl lg:text-2xl" id="cartItemsContainer">
         <!-- Dynamic items will be appended here -->
       </div>
         
@@ -394,10 +394,10 @@
     <!-- code for checking user is logged in than only can view cart page -->
     <script>
   
-
+      //code to check user is logged in or not
       if (!localStorage.getItem('currentUser')) {
-            // If currentUser does not exist in local storage, redirect to the login page.
-            window.location.href = 'login.html'; // Replace '/login' with the path to your login page.
+            
+            window.location.href = 'login.html';
         } 
 
       
