@@ -1,10 +1,14 @@
 function addToCart(button) {
+
+    //code to check user is logged in or not
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (!currentUser) {
         window.location.href = 'login.html';
         return;
     }
    
+
+    //collect product data to save in local storage
     const cardElement = button.closest('.discover-card');
 
     const itemName = cardElement.querySelector('h3 a').textContent;
@@ -61,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /*   const userCartKey = 1 + '_cart';  */
    
 
+  //function to display cart item
     function displayCartItems(userCartKeys) {
         const cartItems = JSON.parse(localStorage.getItem(userCartKeys)) || [];
         
@@ -92,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+   //function to create display design of cart    
     function createCartItemElement(item, index) {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'flex justify-between items-center my-10 w-full md:w-[90%] md:mx-auto mx-auto';
@@ -139,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return itemDiv;
     }
 
+    //function to delete cart item
     function deleteCartItem(index) {
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
         if (!currentUser) {
@@ -189,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
       proceedCheckoutButton.addEventListener('click', (event) => {
         // Check if the agree checkbox is checked
         if (!agreeCheckbox.checked) {
-          event.preventDefault();  // Stop the link from being followed
+          event.preventDefault(); 
           alert('Please check the agree box before proceeding to checkout.');
         }
       });
