@@ -68,8 +68,12 @@
             </li>
 
             <li>
-              <a href="./login.html" class="navbar-link label-lg link:hover" id="navbar-login-logout"></a>
-          </li>
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover"
+                id="navbar-login-logout"
+              ></a>
+            </li>
           </ul>
         </nav>
         <div class="header-action space-x-4">
@@ -79,18 +83,20 @@
             ></a>
           </button>
 
-          <button
-            class="btn-icon profil-btn"
-            aria-label="Swiftbuy account: John Wick"
-          >
-            <img
-              src="./assets/images/nft1.gif"
-              width="50"
-              height="50"
-              alt="John Wick"
-              class="img-cover"
-            />
-          </button>
+          <a href="./profile.html">
+            <button
+              class="btn-icon profil-btn"
+              aria-label="Swiftbuy account: John Wick"
+            >
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+              />
+            </button>
+          </a>
 
           <button
             class="nav-toggle-btn"
@@ -127,7 +133,7 @@
           class="flex w-[70%] mx-auto justify-between mt-8 md:w-[50%] lg:w-[40%]"
         >
           <p class="text-white">Total Price:</p>
-          <p  id="totalPrice" class="text-green-500">0 ETH</p>
+          <p id="totalPrice" class="text-green-500">0 ETH</p>
         </div>
         <div
           class="flex w-[70%] mx-auto justify-between mt-8 md:w-[50%] lg:w-[40%]"
@@ -142,48 +148,55 @@
         <div
           class="flex text-white w-[70%] text-xl mx-auto justify-between mt-8 mb-8 md:w-[50%] lg:w-[40%]"
         >
-          <i
+          <a
+            href="https://www.paypal.com/paypalme/pravin0572"
             class="fa fa-paypal cursor-pointer hover:text-green-500"
             aria-hidden="true"
-          ></i>
-          <i
+          ></a>
+          <a
+            href="https://www.apple.com/ca/apple-pay/"
             class="fa fa-apple cursor-pointer hover:text-green-500"
             aria-hidden="true"
-          ></i>
-          <i
+          ></a>
+          <a
+            href="https://pay.google.com/about/"
             class="fa fa-google cursor-pointer hover:text-green-500"
             aria-hidden="true"
-          ></i>
-          <i
+          ></a>
+          <a
+            href="https://stripe.com/en-ca?utm_campaign=CA_en_Search_Brand_Stripe_EXA-21125091737&utm_medium=cpc&utm_source=google&ad_content=694553479610&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gad_source=1&gclid=Cj0KCQjwiYOxBhC5ARIsAIvdH537LkcWOpoyNQWxL4wyAUM5SnfjmFQACQgtEsY5rEmElUoEKfrb5TIaAhNrEALw_wcB"
             class="fa fa-cc-stripe cursor-pointer hover:text-green-500"
             aria-hidden="true"
-          ></i>
-          <i
+          ></a>
+          <a
+            href="https://www.visa.ca/"
             class="fa fa-cc-visa cursor-pointer hover:text-green-500"
             aria-hidden="true"
-          ></i>
-          <i
+          ></a>
+          <a
+            href="https://www.mastercard.ca/en-ca.html"
             class="fa fa-cc-mastercard cursor-pointer hover:text-green-500"
             aria-hidden="true"
-          ></i>
+          ></a>
         </div>
         <hr class="mt-6 w-[90%] mx-auto opacity-10" />
         <div>
           <h1 class="text-gray-400 text-center my-6 lg:text-xl">
             Current Payment Option
           </h1>
-          <img
-            class="w-10 h-10 mx-auto text-white"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/2048px-MetaMask_Fox.svg.png"
-            alt="metamask"
-          />
+          <a href="https://metamask.io/"
+            ><img
+              class="w-10 h-10 mx-auto text-white"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/2048px-MetaMask_Fox.svg.png"
+              alt="metamask"
+          /></a>
         </div>
 
         <div
           class="flex items-center justify-center w-[90%] mx-auto my-8 text-center md:w-[80%]"
         >
           <div class="flex">
-            <input  id="agree" class="w-auto mr-4" type="checkbox" />
+            <input id="agree" class="w-auto mr-4" type="checkbox" />
             <p class="text-white w-full">
               Before paying you agree with our privacy and policy
             </p>
