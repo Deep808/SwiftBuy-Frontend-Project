@@ -1,0 +1,37 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 7em;
+    margin-bottom: 20px;
+    color: white;
+  }
+  .heading2{
+    font-size: 3em;
+    color: green;
+    display: inline;
+  }
+  .info{
+    font-size: 2em;
+  }
+  #user-details {
+    margin-bottom: 20px;
+  }
+  
+  #user-details p {
+    margin: 5px 0;
+  }
+  
+  #cart-details {
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  #cart-details p {
+    margin: 5px 0;
+  }
+ 
+  
