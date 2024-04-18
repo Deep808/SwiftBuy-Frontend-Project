@@ -431,10 +431,15 @@ ion-icon {
   height: max-content;
 }
 
-.navbar-link ,#navbar-login-logout{
+.navbar-link,
+#navbar-login-logout {
   color: var(--white);
   font-weight: var(--fw-600);
   padding: 16px 13px;
+}
+
+#navbar-login-logout:hover {
+  color: rgb(26, 206, 41);
 }
 
 /* #HERO */
