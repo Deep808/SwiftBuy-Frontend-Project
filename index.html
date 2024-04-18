@@ -75,7 +75,7 @@
             </li>
 
             <li>
-                <a href="./login.html" class="navbar-link label-lg link:hover" id="navbar-login-logout"></a>
+                <a href="./login.html" class="navbar-link label-lg link:hover text-green-500" id="navbar-login-logout"></a>
             </li>
           </ul>
         </nav>
@@ -85,7 +85,9 @@
             <a href="./cart.html"><ion-icon class="w-8 h-8 text-white" name="cart-outline"></ion-icon></a>
           </button>
 
+          <a href="./profile.html">
           <button
+          
             class="btn-icon profil-btn"
             aria-label="Swiftbuy account: John Wick"
           >
@@ -97,7 +99,7 @@
               class="img-cover"
             />
           </button>
-
+        </a>
           <button
             class="nav-toggle-btn"
             aria-label="menu toggle"
@@ -527,7 +529,7 @@
 
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Fantasy Crystal #3902</a>
-                  <button onclick="addToCart(this)"  class="max-[767px]:block md:hidden m-2 bg-[#48e600] p-4 rounded-xl lg:hidden xl:hidden">Add to cart</button>
+                  <button onclick="addToCart(this)"  class="max-[767px]:block md:block md:text-md m-2 bg-[#1ace29] p-4 rounded-xl lg:hidden xl:hidden">Add to cart</button>
                   </h3>
 
                 <div class="card-meta">
@@ -590,7 +592,7 @@
 
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Windchime #768</a>
-                  <button onclick="addToCart(this)"  class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                  <button onclick="addToCart(this)"  class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:block md:block md:text-md d:text-md lg:hidden xl:hidden">Add to cart</button>
                 </h3>
 
                 <div class="card-meta">
@@ -652,7 +654,7 @@
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Probably A Label #
                     3277</a>
-                    <button onclick="addToCart(this)" class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                    <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md  lg:hidden xl:hidden">Add to cart</button>
                     </h3>
     
 
@@ -714,7 +716,7 @@
 
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">IshowSpeed</a>
-                  <button onclick="addToCart(this)"  class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                  <button onclick="addToCart(this)"  class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:block md:block md:text-md lg:hidden xl:hidden">Add to cart</button>
                 </h3>
 
                 <div class="card-meta">
@@ -776,7 +778,7 @@
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Shibuya Scramble P
                     unks</a>
-                    <button onclick="addToCart(this)" class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                    <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md lg:hidden xl:hidden">Add to cart</button>
                 </h3>
 
                 <div class="card-meta">
@@ -836,7 +838,7 @@
 
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Toham650</a>
-                    <button onclick="addToCart(this)" class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                    <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md lg:hidden xl:hidden">Add to cart</button>
                 </h3>
 
                 <div class="card-meta">
@@ -898,7 +900,7 @@
 
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Looki #0147</a>
-                  <button onclick="addToCart(this)" class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                  <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md lg:hidden xl:hidden">Add to cart</button>
                 </h3>
 
                 <div class="card-meta">
@@ -959,7 +961,7 @@
 
                 <h3 class="title-sm card-title flex justify-between items-center">
                   <a href="#" class="link:hover">Poob #285</a>
-                  <button onclick="addToCart(this)"  class="block m-2 bg-[#48e600] p-4 rounded-xl max-[768px]:block md:hidden lg:hidden xl:hidden">Add to cart</button>
+                  <button onclick="addToCart(this)"  class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:block md:block md:text-md lg:hidden xl:hidden">Add to cart</button>
     
                 </h3>
 
@@ -1576,7 +1578,8 @@
               <a href="./login.html" class="footer-link">
                 <ion-icon name="chevron-forward"></ion-icon>
 
-                <span class="span">Login</span>
+                <span id="footer-login" class="span">Login</span>
+
 
               </a>
             </li>
@@ -1599,7 +1602,7 @@
               </li>
 
               <li class="footer-list-item">
-                <a href="#">
+                <a href="https://apps.apple.com/us/app/opensea-nft-marketplace/id1582861796">
                   <img
                     src="./assets/images/appstore.png"
                     width="134"
@@ -1609,7 +1612,7 @@
                   />
                 </a>
 
-                <a href="#">
+                <a href="https://play.google.com/store/search?q=opensea&c=apps&hl=en_CA&gl=US">
                   <img
                     src="./assets/images/playstore.png"
                     width="134"
