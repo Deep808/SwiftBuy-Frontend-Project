@@ -67,8 +67,12 @@
             </li>
 
             <li>
-              <a href="./login.html" class="navbar-link label-lg link:hover" id="navbar-login-logout"></a>
-          </li>
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover"
+                id="navbar-login-logout"
+              ></a>
+            </li>
           </ul>
         </nav>
 
@@ -79,18 +83,20 @@
             ></a>
           </button>
 
-          <button
-            class="btn-icon profil-btn"
-            aria-label="Swiftbuy account: John Wick"
-          >
-            <img
-              src="./assets/images/nft1.gif"
-              width="50"
-              height="50"
-              alt="John Wick"
-              class="img-cover"
-            />
-          </button>
+          <a href="./profile.html">
+            <button
+              class="btn-icon profil-btn"
+              aria-label="Swiftbuy account: John Wick"
+            >
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+              />
+            </button>
+          </a>
 
           <button
             class="nav-toggle-btn"
@@ -131,10 +137,12 @@
         <hr class="mt-6 opacity-10" />
 
         <!-- CARDS  -->
-      <div class="text-center my-12 text-xl lg:text-2xl" id="cartItemsContainer">
-        <!-- Dynamic items will be appended here -->
-      </div>
-        
+        <div
+          class="text-left my-12 text-md sm:text-md lg:text-2xl"
+          id="cartItemsContainer"
+        >
+          <!-- Dynamic items will be appended here -->
+        </div>
       </div>
 
       <!-- CHECKOUT PROCEED  -->
@@ -155,33 +163,34 @@
                 alt="ethereum icon"
               />
               <p id="totalPrice" class="text-green-500 pl-2">Total: 0 ETH</p>
-
             </div>
           </div>
         </div>
-       
-      
-      <!-- </div> -->
 
-      <div class="hidecheckout mt-6 flex items-center w-[95%] mx-auto justify-center">
-        <input
-        class="w-auto mr-4 text-gray-500"
-        type="checkbox"
-        name="agree"
-        id="agree"
-      />
-        <p class="text-sm">
-          I authorize Swiftbuy to use my personal information and  agree to their User Agreement and Buying Policy .
-        </p>
-      </div>
+        <!-- </div> -->
 
-      <a
-      href="./checkout.html"
-      id="proceedCheckout"
-      class="bg-green-500 w-[45%] mx-auto text-center text-white px-6 py-4 font-bold my-6 rounded-md"
-    >
-      Proceed Checkout
-    </a>
+        <div
+          class="hidecheckout mt-6 flex items-center w-[95%] mx-auto justify-center"
+        >
+          <input
+            class="w-auto mr-4 text-gray-500"
+            type="checkbox"
+            name="agree"
+            id="agree"
+          />
+          <p class="text-sm">
+            I authorize Swiftbuy to use my personal information and agree to
+            their User Agreement and Buying Policy .
+          </p>
+        </div>
+
+        <a
+          href="./checkout.html"
+          id="proceedCheckout"
+          class="bg-green-500 w-[55%] md:w-[45%] mx-auto text-center text-white px-6 py-4 font-bold my-6 rounded-md"
+        >
+          Proceed Checkout
+        </a>
       </div>
     </main>
 
@@ -393,15 +402,11 @@
     <script src="./assets/js/script.js"></script>
     <!-- code for checking user is logged in than only can view cart page -->
     <script>
-  
       //code to check user is logged in or not
-      if (!localStorage.getItem('currentUser')) {
-            
-            window.location.href = 'login.html';
-        } 
-
-      
-      </script>
+      if (!localStorage.getItem("currentUser")) {
+        window.location.href = "login.html";
+      }
+    </script>
     <!-- end code for checking user is logged in than only can view cart page -->
   </body>
 </html>
