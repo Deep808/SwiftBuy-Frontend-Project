@@ -1417,3 +1417,28 @@ ion-icon {
     margin: 20px 0; /* Space between stacked stats */
   }
 }
+
+
+/* Our Story Section Styles */
+.story-section {
+  background-color: var(--oxford-blue);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.story-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+.story-heading {
+  color: hsl(0, 0%, 98%); /* Adjust the color to fit your design */
+  font-size: 2rem; /* Large font size for heading */
+  margin-bottom: 1rem;
+}
+.story-paragraph {
+  color: #666; /* Adjust the color to fit your design */
+  font-size: 2rem; /* Comfortable font size for reading */
+  line-height: 1.6; /* Spacing for readability */
+  margin-bottom: 1rem;
+  text-align: left; /* Align text to the left */
+}
