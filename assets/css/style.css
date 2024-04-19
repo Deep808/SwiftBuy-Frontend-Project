@@ -1442,3 +1442,13 @@ ion-icon {
   margin-bottom: 1rem;
   text-align: left; /* Align text to the left */
 }
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .story-heading {
+    font-size: 1.5rem; /* Adjust heading size on smaller screens */
+  }
+
+  .story-paragraph {
+    font-size: 0.9rem; /* Adjust paragraph size on smaller screens */
+  }
+}
