@@ -1557,3 +1557,20 @@ ion-icon {
 .cta-section a:focus {
   background-color: var(--tree-green);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .our-story,
+  .team,
+  .press,
+  .cta-section {
+    padding: 40px 15px;
+  }
+
+  .our-story h2,
+  .team h2,
+  .press h2,
+  .cta-section h2 {
+    font-size: var(--title-md);
+  }
+}
