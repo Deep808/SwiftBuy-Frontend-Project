@@ -1405,3 +1405,15 @@ ion-icon {
 .stat-description {
   font-size: 1.6rem; /* Description text size */
 }
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .stats-section .container {
+    flex-direction: column;
+  }
+
+  .stat {
+    flex-basis: 100%; /* Each stat takes full width on small screens */
+    margin: 20px 0; /* Space between stacked stats */
+  }
+}
