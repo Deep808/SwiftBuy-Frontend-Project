@@ -196,3 +196,59 @@ function logout() {
   localStorage.removeItem("currentUser"); // Remove user from storage
   window.location.href = "./index.html"; // Redirect to the homepage
 }
+
+
+
+//------------------------------Javascript code for careers and jobs page----------------------------
+// Javascript code for search in jobs page
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById('search-input');
+  const jobHeaders = document.querySelectorAll('.job-header');
+
+  // Event listener for job search
+  searchInput.addEventListener('input', function() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      jobHeaders.forEach(function(jobHeader) {
+          const jobTitle = jobHeader.textContent.trim().toLowerCase();
+          const listItem = jobHeader.parentElement.parentElement; // Get the parent element of the job header
+          if (jobTitle.includes(searchTerm)) {
+              listItem.style.display = 'block';
+              jobHeader.classList.add('highlight'); // Add highlight class
+          } else {
+              listItem.style.display = 'none';
+              jobHeader.classList.remove('highlight'); // Remove highlight class
+          }
+      });
+  });
+
+  // Event listener for job details toggle functionality
+  jobHeaders.forEach(function(jobHeader) {
+      jobHeader.addEventListener('click', function() {
+          const jobDetails = jobHeader.nextElementSibling;
+          jobDetails.style.display = jobDetails.style.display === 'block' ? 'none' : 'block';
+      });
+  });
+});
+
+
+
+//Code for form in job apply page
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('job-application-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const jobApplicationData = {};
+    formData.forEach((value, key) => {
+      jobApplicationData[key] = value;
+    });
+    console.log('Job Application Form Data:', jobApplicationData);
+    const formContainer = document.getElementById('form-container');
+    formContainer.style.display = 'none';
+    const successMessage = document.createElement('div');
+    successMessage.textContent = 'Your job application has been submitted successfully!';
+    successMessage.style.fontSize = '24px';
+    formContainer.parentNode.insertBefore(successMessage, formContainer.nextSibling);
+  });
+});
+
