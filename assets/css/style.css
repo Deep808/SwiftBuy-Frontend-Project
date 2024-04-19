@@ -1300,8 +1300,6 @@ ion-icon {
   background-color: var(--prussian-blue);
   color: var(--white);
   margin-top: 130px;
-  /* padding: var(--section-padding) 0; */
-  /* text-align: center; */
 }
 
 .about-hero-container {
@@ -1310,7 +1308,7 @@ ion-icon {
   align-items: center;
   justify-content: center;
   flex-direction: row; /* Image on the right */
-  gap: 20px; /* Adjust the gap between text and image as needed */
+  gap: 20px; 
 }
 
 .about-hero-content {
@@ -1345,19 +1343,19 @@ ion-icon {
 @media (max-width: 768px) {
   /* Center the text content within the .about-hero section */
   .about-hero {
-    text-align: center; /* Center text horizontally */
+    text-align: center; 
   }
 
   .about-hero .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align children elements to center */
+    align-items: center;
   }
 
   .about-hero-content,
   .about-hero-title,
   .about-hero-text {
-    width: 100%; /* Make sure content fills the container */
+    width: 100%; 
   }
 
   .img-aboutUs {
