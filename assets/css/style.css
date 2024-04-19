@@ -1673,3 +1673,48 @@ ion-icon {
   margin-bottom: 10em;
   color: #FFF; 
 }
+
+.why-choose-us {
+  background-color: #0c0c0c;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #f9f6f6;
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+.benefits-list li {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.benefits-list li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefits-list h3 {
+  font-size: 1.5rem;
+  color: #090909;
+}
+
+.benefits-list p {
+  font-size: 1rem;
+  color: #0e2a03;
+}
