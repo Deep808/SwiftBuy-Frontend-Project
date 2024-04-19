@@ -184,69 +184,27 @@ document.addEventListener("DOMContentLoaded", function () {
     
         //encryption of password 
         try {
-        const secretKey = 'secret-key'; 
-        const { encrypted, iv } = await encryptPassword(password, secretKey);
-        console.log("Encrypted data and IV:", encrypted, iv);
+            const secretKey = 'secret-key'; 
+            const { encrypted, iv } = await encryptPassword(password, secretKey);
+            console.log("Encrypted data and IV:", encrypted, iv);
 
-        let newUser = {
-            email,
-            firstName,
-            lastName,
-            password: encrypted,
-            iv
-        };
+            let newUser = {
+                email,
+                firstName,
+                lastName,
+                password: encrypted,
+                iv
+            };
 
-        registerUser(newUser);
-        alert("Signup successful!");
-        window.location.href = 'index.html';
-    } catch (error) {
-        console.error("Encryption or registration failed:", error);
-        alert("Failed to encrypt password or register user.");
-    }
-        // try{
-        //     console.log("secret key");
-
-        //     const { encrypted, iv } = await encryptPassword(password, secretKey);
-        //     console.log("ecerypt key",encrypted,iv);
-
-        //     let newUser = {
-        //         email,
-        //         firstName,
-        //         lastName,
-        //         password: encrypted, // store encrypted password
-        //         iv // store iv for decryption
-        //     };
+            registerUser(newUser);
+            alert("Signup successful!");
+            window.location.href = 'index.html';
+        } catch (error) {
+            console.error("Encryption or registration failed:", error);
+            alert("Failed to encrypt password or register user.");
+        }
     
-        //     console.log("New user data:", newUser);
-        //     registerUser(newUser);
-        //     alert("Signup successful!");
-        //     window.location.href = 'index.html'; // Red
-    
-        // }catch(error){
-        //     alert("Failed to encrypt password.");
-
-        // }
-       
-
-        // Storing user info in Local Storage
-        // Example usage:
-        // let newUser = {
-        //     email,
-        //     firstName,
-        //     lastName,
-        //     password : encrypted,iv
-        // };
-
-        // console.log("printing the new user body and its password",newUser, password);
-        // registerUser(newUser);
-
-    
-    
-        // alert("Signup successful!");
-    
-        // // Redirecting to login page or dashboard page
-        // window.location.href = 'index.html';
-      });
+    });
     
     document.querySelectorAll(".next-btn").forEach((button) => {
         button.addEventListener("click", goToNextStep);
