@@ -1585,7 +1585,7 @@ ion-icon {
   margin-bottom: 1rem; 
 }
 
-.job-application-form {
+.contact-us-form {
   background-color: #333; 
   color: #fff; 
   max-width: 700px; 
@@ -1595,14 +1595,14 @@ ion-icon {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.job-application-form button {
+.contact-us-form button {
   margin: 0 auto; 
   display: block; 
 }
 
-.job-application-form input[type="text"],
-.job-application-form input[type="email"],
-.job-application-form textarea {
+.contact-us-form input[type="text"],
+.contact-us-form input[type="email"],
+.contact-us-form textarea {
   width: calc(100% - 20px); 
   padding: 15px; 
   margin-bottom: 20px; 
@@ -1613,7 +1613,8 @@ ion-icon {
   box-sizing: border-box; 
 }
 
-.job-application-form input[type="submit"] {
+.contact-us-form input[type="submit"],
+#submit-contact {
   background-color: #4CAF50; 
   color: #fff; 
   border: none; 
@@ -1624,28 +1625,29 @@ ion-icon {
   border-radius: 5px; 
   margin-top: 20px; 
   transition: background-color 0.3s; 
+  display: block;
 }
 
-.job-application-form input[type="submit"]:hover,
-.job-application-form input[type="submit"]:focus {
+.contact-us-form input[type="submit"]:hover,
+#submit-contact:hover {
   background-color: #66BB6A; 
   outline: none; 
 }
 
-/* Adding some responsive touch */
+/* Adding responsive behavior for smaller screens */
 @media screen and (max-width: 768px) {
-  .job-application-form {
-      padding: 20px; /* Less padding on smaller screens */
+  .contact-us-form {
+      padding: 20px; 
   }
   
-  .job-application-form input[type="submit"] {
-      width: 100%; /* Full width button on smaller screens */
+  .contact-us-form input[type="submit"],
+  #submit-contact {
+      width: 100%; 
   }
 }
 
-#submit-application {
-  background-color: #4CAF50; 
-  place-items: center;
+#submit-contact {
+  background-color: #4CAF50;
   color: white;
   border: none; 
   padding: 10px 20px; 
@@ -1655,15 +1657,16 @@ ion-icon {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-#submit-application:hover {
+#submit-contact:hover {
   background-color: #45a049; 
   transform: translateY(-2px); 
 }
 
-#submit-application:active {
+#submit-contact:active {
   background-color: #3e8e41; 
   transform: translateY(1px); 
 }
+
 
 #thank-you-message {
   display: none; 

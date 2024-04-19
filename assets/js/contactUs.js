@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('job-application-form');
+    var form = document.getElementById('contact-us-form');
     var thankYouMessage = document.getElementById('thank-you-message');
-    var submitButton = document.getElementById('submit-application'); 
+    var submitButton = document.getElementById('submit-contact'); 
     var formTitle = document.getElementById('form-title'); 
 
     submitButton.addEventListener('click', function(event) {
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var formData = new FormData(form);
 
+        // Ensure the URL here is updated to where you actually need to send the form data
         fetch('https://formspree.io/f/xwkgaonk', {
             method: 'POST',
             body: formData,
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if(response.ok) {
-                //hiding form and form title
+                // Hiding form and form title upon successful submission
                 form.style.display = 'none'; 
                 formTitle.style.display = 'none';
                 thankYouMessage.style.display = 'block'; 
@@ -33,3 +34,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
