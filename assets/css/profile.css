@@ -1,37 +1,74 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  border: 1px;
+  border-radius: 1px;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.heading2 {
+  font-size: 3em;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 1.5em;
+}
+
+#user-details p,
+#cart-details p {
+  margin: 5px 0;
+}
+
+.card img {
+  align-content: center;
+  width: 400px; /* Adjust the image size as needed */
+  height: 400px; /* Adjust the image size as needed */
+  margin-right: 2px; /* Add some space between the image and details */
   
-  .heading {
-    font-size: 7em;
-    margin-bottom: 20px;
-    color: white;
+}
+
+.cart-item{
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+/* Media queries */
+@media screen and (min-width: 575px) {
+  .card img {
+    width: 250px; /* Adjust image size for screen width >= 575px */
   }
-  .heading2{
-    font-size: 3em;
-    color: green;
-    display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  .card img {
+    width: 300px; /* Adjust image size for screen width >= 768px */
   }
-  .info{
-    font-size: 2em;
+}
+
+@media screen and (min-width: 992px) {
+  .card img {
+    width: 350px; /* Adjust image size for screen width >= 992px */
   }
-  #user-details {
-    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .card img {
+    width: 400px; /* Adjust image size for screen width >= 1200px */
   }
-  
-  #user-details p {
-    margin: 5px 0;
-  }
-  
-  #cart-details {
-    border-top: 2px solid #ccc;
-    padding-top: 20px;
-  }
-  
-  #cart-details p {
-    margin: 5px 0;
-  }
- 
-  
+}
+
