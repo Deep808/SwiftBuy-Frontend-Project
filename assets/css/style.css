@@ -159,6 +159,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   z-index: 1;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+
 }
 
 ion-icon {
@@ -1288,47 +1290,45 @@ ion-icon {
 }
 
 /* -----------------------------------------About Us start ---------------------------------------- */
-
-/* About-Us Style start - specific designs just to avoid conflicts*/
-
 .about-main {
   background-color: var(--prussian-blue); 
   color: var(--white);
 }
 
-.about-container {
-  max-width: 1120px;
-  margin: 0 auto;
+/* About Us Hero Section */
+.about-hero {
+  background-color: var(--prussian-blue);
+  color: var(--white);
+  margin-top: 130px;
+  /* padding: var(--section-padding) 0; */
+  /* text-align: center; */
+}
+
+.about-hero-container {
+  display: flex;
   padding: 60px 20px;
-  
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* Image on the right */
+  gap: 20px; /* Adjust the gap between text and image as needed */
 }
 
-.about-title {
-  color: var(--white);
+.about-hero-content {
+  max-width: 50%; /* Adjust text width as needed */
+}
+
+.about-hero-title {
+  font-size: var(--headline-lg);
+  font-weight: var(--fw-700);
   margin-bottom: 20px;
-  font-size: 2.2rem; 
-  font-weight: var(--fw-600); 
 }
 
-.about-text {
-  color: var(--white);
-  margin-bottom: 20px;
-  font-size: 1.6rem; 
-  line-height: 1.6;
+.about-hero-text {
+  font-size: var(--body-md);
 }
 
-@media (max-width: 768px) {
-  .about-container {
-      padding: 40px 15px;
-  }
-  
-  .about-title {
-      font-size: 1.8rem; 
-  }
-
-  .about-text {
-      font-size: 1.4rem; 
-  }
+.about-hero-img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: right; /* Center image in the available flex container space */
 }
-
-/* -----------------------------------------About Us end ---------------------------------------- */
