@@ -1330,15 +1330,15 @@ ion-icon {
 .about-hero-img-wrapper {
   flex: 1;
   display: flex;
-  justify-content: right; /* Center image in the available flex container space */
+  justify-content: right; 
 }
 
 .img-aboutUs {
-  border-radius: 60%; /* Make image round */
-  width: 100%; /* Adjust image size as needed */
-  max-width: 500px; /* Example size, adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the round area */
+  border-radius: 60%; 
+  width: 100%; 
+  max-width: 500px; 
+  height: auto; 
+  object-fit: cover; 
 }
 
 /* For responsive design */
@@ -1363,4 +1363,45 @@ ion-icon {
   .img-aboutUs {
     display: none; /* Hide the image on smaller screens */
   }
+}
+
+
+/* Stats Section Style */
+.stats-section {
+  background-color: var(--white); 
+  color: var(--black); 
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stats-section .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 20%; /* Adjusts the width for each stat block */
+  margin: 10px; /* Space between the stats */
+}
+
+.stat-icon {
+  width: 80px; /* Adjusts the icon size */
+  height: auto; /* Maintains the aspect ratio */
+  margin-bottom: 20px;
+}
+
+.stat-number {
+  font-size: 2.4rem; /* Large number size */
+  font-weight: bold; /* Make the number bold */
+  margin-bottom: 5px;
+}
+
+.stat-description {
+  font-size: 1.6rem; /* Description text size */
 }
