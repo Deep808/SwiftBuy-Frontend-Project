@@ -1332,3 +1332,35 @@ ion-icon {
   display: flex;
   justify-content: right; /* Center image in the available flex container space */
 }
+
+.img-aboutUs {
+  border-radius: 60%; /* Make image round */
+  width: 100%; /* Adjust image size as needed */
+  max-width: 500px; /* Example size, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the round area */
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+  /* Center the text content within the .about-hero section */
+  .about-hero {
+    text-align: center; /* Center text horizontally */
+  }
+
+  .about-hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align children elements to center */
+  }
+
+  .about-hero-content,
+  .about-hero-title,
+  .about-hero-text {
+    width: 100%; /* Make sure content fills the container */
+  }
+
+  .img-aboutUs {
+    display: none; /* Hide the image on smaller screens */
+  }
+}
