@@ -1287,4 +1287,198 @@ ion-icon {
   .discover .grid-list {
     grid-template-columns: repeat(4, 1fr);
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+ /**
+   * Styling for Careers,jobs page elements
+   */
+
+
+
+   .form-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  textarea,
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  .job-application-form{
+    font-size: large;
+    color: #45a049;
+    font-weight: bold;
+  }
+  
+  #jobdesc{
+    font-weight: bold;
+    color: white;
+  }
+  #search-box {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+  }
+  
+  #job-list {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #job-list-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .job {
+    margin-bottom: 20px;
+    border: 1px solid whit;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: medium;
+  }
+  
+  .job-header {
+    font-size: large;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .job-details {
+    padding: 10px;
+    display: none;
+    text-align: left;
+  }
+  
+  .job-details p{
+    
+    font-size: medium;
+  }
+  .apply-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .apply-button:hover {
+    background-color: #45a049;
+  }
+  
+  
+  
+  /* Default styles for form-container */
+  .form-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Media query for screens with minimum width of 575px */
+  @media only screen and (min-width: 575px) {
+    .form-container {
+      width: 80%; 
+    }
+  
+    label {
+      font-size: 16px; 
+    }
+  
+    .submit-button {
+      font-size: 16px; 
+  }
+  
+  /* Media query for screens with minimum width of 768px */
+  @media only screen and (min-width: 768px) {
+    .form-container {
+      width: 70%; 
+    }
+  
+    label {
+      font-size: 18px; 
+    }
+  
+    .submit-button {
+      font-size: 18px;
+    }
+  }
+  
+  /* Media query for screens with minimum width of 992px */
+  @media only screen and (min-width: 992px) {
+    .form-container {
+      width: 60%; 
+    }
+  
+    label {
+      font-size: 20px; 
+    }
+  
+    .submit-button {
+      font-size: 20px; 
+    }
+  }
+  
+  /* Media query for screens with minimum width of 1200px */
+  @media only screen and (min-width: 1200px) {
+    .form-container {
+      width: 50%; 
+    }
+  
+    label {
+      font-size: 22px; 
+    }
+    .submit-button {
+      font-size: 22px; 
+  }
+  }
+>>>>>>> 104124d (Added styling for careers, jobs and jobapply page elements)
