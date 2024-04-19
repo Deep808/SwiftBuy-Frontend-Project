@@ -66,6 +66,7 @@
   }
 }
 
+
 @media screen and (min-width: 1200px) {
   .card img {
     width: 400px; /* Adjust image size for screen width >= 1200px */
