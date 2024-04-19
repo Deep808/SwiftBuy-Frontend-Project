@@ -1633,3 +1633,14 @@ ion-icon {
   background-color: #66BB6A; 
   outline: none; 
 }
+
+/* Adding some responsive touch */
+@media screen and (max-width: 768px) {
+  .job-application-form {
+      padding: 20px; /* Less padding on smaller screens */
+  }
+  
+  .job-application-form input[type="submit"] {
+      width: 100%; /* Full width button on smaller screens */
+  }
+}
