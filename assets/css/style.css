@@ -1413,8 +1413,8 @@ ion-icon {
   }
 
   .stat {
-    flex-basis: 100%; /* Each stat takes full width on small screens */
-    margin: 20px 0; /* Space between stacked stats */
+    flex-basis: 100%; 
+    margin: 20px 0; 
   }
 }
 
@@ -1431,24 +1431,64 @@ ion-icon {
   padding: 1rem;
 }
 .story-heading {
-  color: hsl(0, 0%, 98%); /* Adjust the color to fit your design */
-  font-size: 2rem; /* Large font size for heading */
+  color: hsl(0, 0%, 98%); 
+  font-size: 2rem; 
   margin-bottom: 1rem;
 }
 .story-paragraph {
-  color: #666; /* Adjust the color to fit your design */
-  font-size: 2rem; /* Comfortable font size for reading */
-  line-height: 1.6; /* Spacing for readability */
+  color: #666; 
+  font-size: 2rem; 
+  line-height: 1.6; 
   margin-bottom: 1rem;
-  text-align: left; /* Align text to the left */
+  text-align: left; 
 }
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   .story-heading {
-    font-size: 1.5rem; /* Adjust heading size on smaller screens */
+    font-size: 1.5rem; 
   }
 
   .story-paragraph {
-    font-size: 0.9rem; /* Adjust paragraph size on smaller screens */
+    font-size: 0.9rem; 
   }
+}
+
+
+/* Team Section Style */
+.team-section {
+  background-color: var(--alice-blue-2); /* Adjust based on your theme colors */
+  padding: 60px 0;
+  text-align: center;
+}
+.section-title {
+  color: var(--prussian-blue); /* Adjust based on your theme colors */
+  margin-bottom: 30px;
+  font-size: var(--headline-md);
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+.team-member {
+  width: 200px; /* Adjust as necessary */
+}
+
+.team-member-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Makes the photo round */
+  margin-bottom: 15px;
+}
+
+.team-member-name {
+  color: var(--prussian-blue); /* Adjust based on your theme colors */
+  font-size: var(--title-md);
+  margin-bottom: 5px;
+}
+
+.team-member-role {
+  color: var(--cadet-grey); /* Adjust based on your theme colors */
+  font-size: var(--body-md);
 }
