@@ -1574,3 +1574,62 @@ ion-icon {
     font-size: var(--title-md);
   }
 }
+/* -----------------------------------------About Us end ---------------------------------------- */
+
+
+/* ----------------------------------------- Job Application ---------------------------------------- */
+
+#form-title {
+  font-size: 2rem; 
+  color: #ffffff; 
+  text-align: center; 
+  margin-top: 15rem; 
+  margin-bottom: 1rem; 
+}
+
+.job-application-form {
+  background-color: #333; 
+  color: #fff; 
+  max-width: 700px; 
+  margin: 20px auto; 
+  padding: 40px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.job-application-form button {
+  margin: 0 auto; 
+  display: block; 
+}
+
+.job-application-form input[type="text"],
+.job-application-form input[type="email"],
+.job-application-form textarea {
+  width: calc(100% - 20px); 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  border: 1px solid #555; 
+  background-color: #222; 
+  color: #ddd; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+}
+
+.job-application-form input[type="submit"] {
+  background-color: #4CAF50; 
+  color: #fff; 
+  border: none; 
+  padding: 15px 30px; 
+  font-size: 1.1em; 
+  text-transform: uppercase; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  margin-top: 20px; 
+  transition: background-color 0.3s; 
+}
+
+.job-application-form input[type="submit"]:hover,
+.job-application-form input[type="submit"]:focus {
+  background-color: #66BB6A; 
+  outline: none; 
+}
