@@ -361,6 +361,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarLoginLogoutButton = document.getElementById(
+    "navbar-login-logout"
+  );
+  const footerLogin = document.getElementById("footer-login");
+
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (currentUser) {
+    // Changing to Logout if a user is found
+    navbarLoginLogoutButton.setAttribute("href", "#");
+    navbarLoginLogoutButton.innerText = "Logout";
+    footerLogin.innerText = "Logout";
+    navbarLoginLogoutButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      logout();
+    });
+    footerLogin.addEventListener("click", function (e) {
+      e.preventDefault();
+      logout();
+    });
+  } else {
+    // Keeping as Login if no user is found
+    navbarLoginLogoutButton.setAttribute("href", "./login.html");
+    navbarLoginLogoutButton.innerText = "Login";
+    footerLogin.innerText = "Login";
+  }
+});
+
 function logout() {
   console.log("Logging out...");
   localStorage.removeItem("currentUser"); // Remove user from storage

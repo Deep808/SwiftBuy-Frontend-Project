@@ -1,3 +1,7 @@
+<!-- 
+    Name: Sushma Telagamsetti
+  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,13 +14,13 @@
     <title>SwiftBuy - Careers</title>
 
     <!-- 
-    - favicon
-  -->
+      - favicon
+    -->
     <link rel="shortcut icon" href="./assets/images/favlogo.png" />
 
     <!-- 
-    - google font link
-  -->
+      - google font link
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,20 +29,20 @@
     />
 
     <!-- 
-    - custom css link
-  -->
+      - custom css link
+    -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/profile.css" />
   </head>
 
   <body id="top">
     <!-- 
-    - #HEADER
-  -->
+      - #HEADER
+    -->
 
     <header class="header" data-header>
       <div class="container">
-        <a href="#">
+        <a href="./index.html">
           <img
             src="./assets/images/Light-Logo.png"
             width="130"
@@ -66,7 +70,7 @@
             </li>
 
             <li>
-              <a href="./jobs.html" class="navbar-link label-lg link:hover"
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
                 >Stats</a
               >
             </li>
@@ -76,33 +80,43 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link label-lg link:hover">Careers</a>
+              <a href="./careers.html" class="navbar-link label-lg link:hover"
+                >Careers</a
+              >
             </li>
 
             <li>
-              <a href="./log-in.html" class="navbar-link label-lg link:hover"
-                >Login</a
-              >
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover text-green-500"
+                id="navbar-login-logout"
+              ></a>
             </li>
           </ul>
         </nav>
 
         <div class="header-action space-x-4">
           <button class="btn-icon primary" aria-label="wallet">
-            <ion-icon class="w-8 h-8 text-white" name="cart-outline"></ion-icon>
+            <a href="./cart.html"
+              ><ion-icon
+                class="w-8 h-8 text-white"
+                name="cart-outline"
+              ></ion-icon
+            ></a>
           </button>
 
           <button
             class="btn-icon profil-btn"
             aria-label="Swiftbuy account: John Wick"
           >
-            <img
-              src="./assets/images/nft1.gif"
-              width="50"
-              height="50"
-              alt="John Wick"
-              class="img-cover"
-            />
+            <a href="./profile.html">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+            /></a>
           </button>
 
           <button
@@ -129,34 +143,28 @@
     <main>
       <article>
         <!-- 
-        - #Explore
-      -->
+          - #Profile
+        -->
 
         <section class="section hero" aria-label="home">
-            <div class="container">
-                <!-- Your profile page content here -->
-                <h1 class="heading">Welcome to your profile</h1>
-                <div id="user-details">
-                    
-                </div>
-                <div id="cart-details">
-                    <!-- Cart details will be displayed here -->
-                </div>
-            </div>
+          <div class="container">
+            <h1 class="heading">Welcome to your profile</h1>
+            <div
+              class="bg-gray-100 bg-opacity-10 rounded-lg"
+              id="user-details"
+            ></div>
+            <div
+              class="bg-gray-100 bg-opacity-10 rounded-lg"
+              id="cart-details"
+            ></div>
+          </div>
         </section>
- 
-
-      
-
-      
-       
       </article>
     </main>
 
-
     <!-- 
-    - #FOOTER
-  -->
+      - #FOOTER
+    -->
 
     <footer class="footer text-[1.5em]">
       <div class="section footer-top">
@@ -262,10 +270,10 @@
             </li>
 
             <li>
-              <a href="#" class="footer-link">
+              <a href="./login.html" class="footer-link">
                 <ion-icon name="chevron-forward"></ion-icon>
 
-                <span class="span">Login</span>
+                <span id="footer-login" class="span">Login</span>
               </a>
             </li>
 
@@ -343,31 +351,31 @@
       </div>
     </footer>
 
-     <!-- 
-    - #BACK TO TOP
-  -->
+    <!-- 
+      - #BACK TO TOP
+    -->
 
-  <a
-  href="#top"
-  class="back-to-top btn-icon"
-  aria-label="back to top"
-  data-back-top-btn
->
-  <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-</a>
+    <a
+      href="#top"
+      class="back-to-top btn-icon"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
 
-   <!-- Background Gradient  -->
-   <div class="body-bg-shape"></div>
+    <!-- Background Gradient  -->
+    <div class="body-bg-shape"></div>
 
     <!-- 
-    - custom js link
-  -->
+      - custom js link
+    -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/profile.js"></script>
     <script src="./assets/js/cart.js"></script>
     <!-- 
-    - ionicon link
-  -->
+      - ionicon link
+    -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -378,4 +386,3 @@
     ></script>
   </body>
 </html>
-

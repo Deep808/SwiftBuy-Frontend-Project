@@ -37,7 +37,7 @@
 
     <header class="header" data-header>
       <div class="container">
-        <a href="#">
+        <a href="./index.html">
           <img
             src="./assets/images/Light-Logo.png"
             width="130"
@@ -65,7 +65,7 @@
             </li>
 
             <li>
-              <a href="./jobs.html" class="navbar-link label-lg link:hover"
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
                 >Stats</a
               >
             </li>
@@ -75,33 +75,43 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link label-lg link:hover">Careers</a>
+              <a href="./careers.html" class="navbar-link label-lg link:hover"
+                >Careers</a
+              >
             </li>
 
             <li>
-              <a href="./log-in.html" class="navbar-link label-lg link:hover"
-                >Login</a
-              >
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover text-green-500"
+                id="navbar-login-logout"
+              ></a>
             </li>
           </ul>
         </nav>
 
         <div class="header-action space-x-4">
           <button class="btn-icon primary" aria-label="wallet">
-            <ion-icon class="w-8 h-8 text-white" name="cart-outline"></ion-icon>
+            <a href="./cart.html"
+              ><ion-icon
+                class="w-8 h-8 text-white"
+                name="cart-outline"
+              ></ion-icon
+            ></a>
           </button>
 
           <button
             class="btn-icon profil-btn"
             aria-label="Swiftbuy account: John Wick"
           >
-            <img
-              src="./assets/images/nft1.gif"
-              width="50"
-              height="50"
-              alt="John Wick"
-              class="img-cover"
-            />
+            <a href="./profile.html">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+            /></a>
           </button>
 
           <button
@@ -125,162 +135,286 @@
       </div>
     </header>
 
-    <main>
+    <main class="w-[50%] mx-auto">
       <article>
         <!-- 
         - #List of job positions in jobs page
       -->
 
         <section class="section hero" aria-label="home">
-          <div id="search-box">
-            <input type="text" id="search-input" placeholder="Search job...">
-        </div>
-        <div id="job-list">
-          <ul id="job-list-items">
-              <li>
-                  <div class="job">
-                      <div class="job-header">Software Engineer</div>
-                      <div class="job-details">
-                        <p>Location: Toronto</p>
-                        <p>Job Type: Full-Time</p>
-                        <p id="jobdesc">Responsibilities:</p>
-                        <ol>
-                          <li>Collaborate with product managers, designers, and other stakeholders to understand requirements and translate them into technical specifications.</li>
-                          <li>Design and develop high-quality software solutions that meet technical and business requirements.</li>
-                          <li>Write clean, maintainable, and efficient code following best practices and coding standards.</li>
-                        </ol>
-                        <p id="jobdesc">Qualifications:</p>
-                        <ol>
-                          <li>Bachelor's degree in Computer Science, Engineering, or related field.</li>
-                          <li>3 years of experience in software development.</li>
-                          <li>Proficiency in programming languages such as Java, Python, or C++.</li>
-                        </ol>
-                        <a href="./jobapply.html" class="apply-button">Apply for this job</a>
-                         <!-- <button class="apply-button">Apply for this job</button> -->
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="job">
-                      <div class="job-header">Data Analyst</div>
-                      <div class="job-details">
-                        <p>Location: Toronto</p>
-                        <p>Job Type: Full-Time</p>
-                        <p id="jobdesc">Responsibilities:</p>
-                        <ol>
-                          <li>Collect, clean, and preprocess data from various sources to ensure accuracy and reliability.</li>
-                          <li>Analyze large datasets using statistical techniques and data visualization tools to identify trends and patterns.</li>
-                          <li>Develop and maintain data models, algorithms, and dashboards to support business objectives.</li>
-                        </ol>
-                        <p id="jobdesc">Qualifications:</p>
-                        <ol>
-                          <li>Bachelor's degree in Computer Science, Statistics, Mathematics, or a related field. Master's degree preferred.</li>
-                          <li>Proven experience as a Data Analyst or similar role, with a strong track record of analyzing complex datasets.</li>
-                          <li>Proficiency in SQL, Python, R, or other programming languages for data manipulation and analysis.</li>
-                        </ol>
-                        <a href="./jobapply.html" class="apply-button">Apply for this job</a>
-                      </div>
-                  </div>
-              </li>
-
+          <div class="w-[90%] mx-auto mb-[15em]" id="search-box">
+            <input
+              class="mx-auto border-none text-white outline-none bg-gray-100 bg-opacity-10"
+              type="text"
+              id="search-input"
+              placeholder="Search job..."
+            />
+          </div>
+          <div id="job-list">
+            <ul id="job-list-items">
               <li>
                 <div class="job">
-                    <div class="job-header">Product Manager</div>
-                    <div class="job-details">
-                      <p>Location: Toronto</p>
-                      <p>Job Type: Full-Time</p>
-                      <p id="jobdesc">Responsibilities:</p>
-                      <ol>
-                        <li>Define and articulate the product vision, strategy, and roadmap based on market analysis, customer feedback, and business goals.</li>
-                        <li>Collaborate with stakeholders, including engineering, design, marketing, and sales teams, to gather requirements, prioritize features, and drive product development efforts.</li>
-                        <li>Lead the product development process, including concept ideation, requirement gathering, user story definition, and sprint planning.</li>
-                      </ol>
-                      <p id="jobdesc">Qualifications:</p>
-                      <ol>
-                        <li>Bachelor's degree in Computer Science, Engineering, Business, or a related field. MBA preferred.</li>
-                        <li>Proven experience as a Product Manager or similar role, with a track record of successfully launching and managing products from conception to launch.</li>
-                        <li>Strong analytical and problem-solving skills, with the ability to translate business requirements into actionable product features and specifications.</li>
-                      </ol>
-                      <a href="./jobapply.html" class="apply-button">Apply for this job</a>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-              <div class="job">
-                  <div class="job-header">Marketing Manager</div>
-                  <div class="job-details">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Software Engineer
+                  </div>
+                  <div class="job-details my-[2em]">
                     <p>Location: Toronto</p>
                     <p>Job Type: Full-Time</p>
                     <p id="jobdesc">Responsibilities:</p>
                     <ol>
-                      <li>Develop and implement strategic marketing plans and campaigns to achieve business objectives, including brand awareness, lead generation, and customer acquisition.</li>
-                      <li>Lead and manage a team of marketers, including digital marketers, content creators, and graphic designers, to execute marketing initiatives effectively and efficiently.
-                        </li>
-                      <li>Conduct market research and competitive analysis to identify market trends, customer needs, and growth opportunities</li>
+                      <li>
+                        Collaborate with product managers, designers, and other
+                        stakeholders to understand requirements and translate
+                        them into technical specifications.
+                      </li>
+                      <li>
+                        Design and develop high-quality software solutions that
+                        meet technical and business requirements.
+                      </li>
+                      <li>
+                        Write clean, maintainable, and efficient code following
+                        best practices and coding standards.
+                      </li>
                     </ol>
                     <p id="jobdesc">Qualifications:</p>
                     <ol>
-                      <li>Bachelor's degree in Marketing, Business Administration, or a related field. MBA preferred.
-                        
-                        </li>
-                      <li>Proven experience as a Marketing Manager or similar role, with a track record of developing and executing successful marketing strategies and campaigns.</li>
-                      <li>Strong leadership and management skills, with the ability to motivate and inspire team members to achieve goals and deliver results.</li>
+                      <li>
+                        Bachelor's degree in Computer Science, Engineering, or
+                        related field.
+                      </li>
+                      <li>3 years of experience in software development.</li>
+                      <li>
+                        Proficiency in programming languages such as Java,
+                        Python, or C++.
+                      </li>
                     </ol>
-                    <a href="./jobapply.html" class="apply-button">Apply for this job</a>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                    <!-- <button class="apply-button">Apply for this job</button> -->
                   </div>
-              </div>
-          </li>
-
-          <li>
-            <div class="job">
-                <div class="job-header">Graphic Designer</div>
-                <div class="job-details">
-                  <p>Location: Toronto</p>
-                  <p>Job Type: Full-Time</p>
-                  <p id="jobdesc">Responsibilities:</p>
-                  <ol>
-                    <li>Conceptualize and design visual assets, including digital and print materials, such as social media graphics, website banners, email newsletters, advertisements, brochures, and product packaging.
-                      
-                      </li>
-                    <li>Collaborate with the marketing team to develop creative concepts and design solutions that align with brand guidelines and project objectives.</li>
-                    <li>Produce high-quality, pixel-perfect designs that effectively communicate key messages and resonate with target audiences</li>
-                  </ol>
-                  <p id="jobdesc">Qualifications:</p>
-                  <ol>
-                    <li>Bachelor's degree in Graphic Design, Visual Communication, or a related field.
-                     
-                      </li>
-                    <li> Proven experience as a Graphic Designer or similar role, with a strong portfolio showcasing a range of design projects and styles.</li>
-                    <li>Proficiency in graphic design software such as Adobe Creative Suite (Photoshop, Illustrator, InDesign).</li>
-                  </ol>
-                  <a href="./jobapply.html" class="apply-button">Apply for this job</a>
                 </div>
-            </div>
-        </li>
+              </li>
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Data Analyst
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Collect, clean, and preprocess data from various sources
+                        to ensure accuracy and reliability.
+                      </li>
+                      <li>
+                        Analyze large datasets using statistical techniques and
+                        data visualization tools to identify trends and
+                        patterns.
+                      </li>
+                      <li>
+                        Develop and maintain data models, algorithms, and
+                        dashboards to support business objectives.
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Computer Science, Statistics,
+                        Mathematics, or a related field. Master's degree
+                        preferred.
+                      </li>
+                      <li>
+                        Proven experience as a Data Analyst or similar role,
+                        with a strong track record of analyzing complex
+                        datasets.
+                      </li>
+                      <li>
+                        Proficiency in SQL, Python, R, or other programming
+                        languages for data manipulation and analysis.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Product Manager
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Define and articulate the product vision, strategy, and
+                        roadmap based on market analysis, customer feedback, and
+                        business goals.
+                      </li>
+                      <li>
+                        Collaborate with stakeholders, including engineering,
+                        design, marketing, and sales teams, to gather
+                        requirements, prioritize features, and drive product
+                        development efforts.
+                      </li>
+                      <li>
+                        Lead the product development process, including concept
+                        ideation, requirement gathering, user story definition,
+                        and sprint planning.
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Computer Science, Engineering,
+                        Business, or a related field. MBA preferred.
+                      </li>
+                      <li>
+                        Proven experience as a Product Manager or similar role,
+                        with a track record of successfully launching and
+                        managing products from conception to launch.
+                      </li>
+                      <li>
+                        Strong analytical and problem-solving skills, with the
+                        ability to translate business requirements into
+                        actionable product features and specifications.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Marketing Manager
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Develop and implement strategic marketing plans and
+                        campaigns to achieve business objectives, including
+                        brand awareness, lead generation, and customer
+                        acquisition.
+                      </li>
+                      <li>
+                        Lead and manage a team of marketers, including digital
+                        marketers, content creators, and graphic designers, to
+                        execute marketing initiatives effectively and
+                        efficiently.
+                      </li>
+                      <li>
+                        Conduct market research and competitive analysis to
+                        identify market trends, customer needs, and growth
+                        opportunities
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Marketing, Business Administration,
+                        or a related field. MBA preferred.
+                      </li>
+                      <li>
+                        Proven experience as a Marketing Manager or similar
+                        role, with a track record of developing and executing
+                        successful marketing strategies and campaigns.
+                      </li>
+                      <li>
+                        Strong leadership and management skills, with the
+                        ability to motivate and inspire team members to achieve
+                        goals and deliver results.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Graphic Designer
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Conceptualize and design visual assets, including
+                        digital and print materials, such as social media
+                        graphics, website banners, email newsletters,
+                        advertisements, brochures, and product packaging.
+                      </li>
+                      <li>
+                        Collaborate with the marketing team to develop creative
+                        concepts and design solutions that align with brand
+                        guidelines and project objectives.
+                      </li>
+                      <li>
+                        Produce high-quality, pixel-perfect designs that
+                        effectively communicate key messages and resonate with
+                        target audiences
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Graphic Design, Visual
+                        Communication, or a related field.
+                      </li>
+                      <li>
+                        Proven experience as a Graphic Designer or similar role,
+                        with a strong portfolio showcasing a range of design
+                        projects and styles.
+                      </li>
+                      <li>
+                        Proficiency in graphic design software such as Adobe
+                        Creative Suite (Photoshop, Illustrator, InDesign).
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
               <!-- Add more job listings as needed -->
-          </ul>
-      </div>
-      <div id="apply-form" style="display:none;">
-        <h2>Job Application Form</h2>
-        <form id="job-application-form">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <input type="submit" value="Apply">
-        </form>
-    </div>
+            </ul>
+          </div>
+          <div
+            class="bg-gray-100 bg-opacity-10"
+            id="apply-form"
+            style="display: none"
+          >
+            <h2>Job Application Form</h2>
+            <form id="job-application-form">
+              <label for="name">Name:</label><br />
+              <input type="text" id="name" name="name" /><br />
+              <label for="email">Email:</label><br />
+              <input type="email" id="email" name="email" /><br />
+              <input type="submit" value="Apply" />
+            </form>
+          </div>
         </section>
- 
-
-      
-
-      
-       
       </article>
     </main>
-
 
     <!-- 
     - #FOOTER
@@ -390,10 +524,10 @@
             </li>
 
             <li>
-              <a href="#" class="footer-link">
+              <a href="./login.html" class="footer-link">
                 <ion-icon name="chevron-forward"></ion-icon>
 
-                <span class="span">Login</span>
+                <span id="footer-login" class="span">Login</span>
               </a>
             </li>
 
@@ -471,21 +605,21 @@
       </div>
     </footer>
 
-     <!-- 
+    <!-- 
     - #BACK TO TOP
   -->
 
-  <a
-  href="#top"
-  class="back-to-top btn-icon"
-  aria-label="back to top"
-  data-back-top-btn
->
-  <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-</a>
+    <a
+      href="#top"
+      class="back-to-top btn-icon"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
 
-   <!-- Background Gradient  -->
-   <div class="body-bg-shape"></div>
+    <!-- Background Gradient  -->
+    <div class="body-bg-shape"></div>
 
     <!-- 
     - custom js link

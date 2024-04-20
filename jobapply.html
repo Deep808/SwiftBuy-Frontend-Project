@@ -37,7 +37,7 @@
 
     <header class="header" data-header>
       <div class="container">
-        <a href="#">
+        <a href="./index.html">
           <img
             src="./assets/images/Light-Logo.png"
             width="130"
@@ -65,7 +65,7 @@
             </li>
 
             <li>
-              <a href="./jobs.html" class="navbar-link label-lg link:hover"
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
                 >Stats</a
               >
             </li>
@@ -75,33 +75,43 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link label-lg link:hover">Careers</a>
+              <a href="./careers.html" class="navbar-link label-lg link:hover"
+                >Careers</a
+              >
             </li>
 
             <li>
-              <a href="./log-in.html" class="navbar-link label-lg link:hover"
-                >Login</a
-              >
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover text-green-500"
+                id="navbar-login-logout"
+              ></a>
             </li>
           </ul>
         </nav>
 
         <div class="header-action space-x-4">
           <button class="btn-icon primary" aria-label="wallet">
-            <ion-icon class="w-8 h-8 text-white" name="cart-outline"></ion-icon>
+            <a href="./cart.html"
+              ><ion-icon
+                class="w-8 h-8 text-white"
+                name="cart-outline"
+              ></ion-icon
+            ></a>
           </button>
 
           <button
             class="btn-icon profil-btn"
             aria-label="Swiftbuy account: John Wick"
           >
-            <img
-              src="./assets/images/nft1.gif"
-              width="50"
-              height="50"
-              alt="John Wick"
-              class="img-cover"
-            />
+            <a href="./profile.html">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+            /></a>
           </button>
 
           <button
@@ -132,34 +142,75 @@
       -->
 
         <section class="section hero" aria-label="home">
-            <div class="form-container" id="form-container">
-                <h2 class="job-application-form">Job Application Form</h2>
-                <br>
-                <form id="job-application-form">
-                  <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="resume">Upload Resume:</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message(Optional):</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                  </div>
-                  <button class="submit-button" type="submit">Submit</button>
-                </form>
+          <div
+            class="form-container w-[90%] py-28 bg-gray-100 bg-opacity-10"
+            id="form-container"
+          >
+            <h2
+              class="job-application-form text-white text-[3em] lg:text-[4em] my-12"
+            >
+              Job Application Form
+            </h2>
+            <br />
+            <form id="job-application-form">
+              <div
+                class="form-group pb-12 w-[80%] md:w-[60%] lg:w-[30%] mx-auto"
+              >
+                <label class="text-white" for="name">Name:</label>
+                <input
+                  class="mt-6 border-none outline-none text-green-500"
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                />
               </div>
+              <div
+                class="form-group pb-12 w-[80%] md:w-[60%] lg:w-[30%] mx-auto"
+              >
+                <label class="text-white" for="email">Email:</label>
+                <input
+                  class="mt-6 border-none outline-none text-green-500"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div
+                class="form-group pb-12 w-[80%] md:w-[60%] lg:w-[30%] mx-auto"
+              >
+                <label class="text-white" for="resume">Upload Resume:</label>
+                <input
+                  type="file"
+                  id="resume"
+                  name="resume"
+                  accept=".pdf,.doc,.docx"
+                  required
+                  class="mt-6 border-none outline-none text-green-500"
+                />
+              </div>
+              <div
+                class="form-group pb-12 w-[80%] md:w-[60%] lg:w-[30%] mx-auto"
+              >
+                <label class="text-white" for="message"
+                  >Message(Optional):</label
+                >
+                <textarea
+                  class="mt-6 border-none outline-none text-2xl text-black p-6"
+                  id="message"
+                  name="message"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button class="submit-button w-[20%] mx-auto" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
         </section>
-
       </article>
     </main>
-
 
     <!-- 
     - #FOOTER
@@ -267,15 +318,13 @@
                 <span class="span">Privacy policy</span>
               </a>
             </li>
-
             <li>
-              <a href="#" class="footer-link">
+              <a href="./login.html" class="footer-link">
                 <ion-icon name="chevron-forward"></ion-icon>
 
-                <span class="span">Login</span>
+                <span id="footer-login" class="span">Login</span>
               </a>
             </li>
-
             <li>
               <a href="#" class="footer-link">
                 <ion-icon name="chevron-forward"></ion-icon>
@@ -350,21 +399,21 @@
       </div>
     </footer>
 
-     <!-- 
+    <!-- 
     - #BACK TO TOP
   -->
 
-  <a
-  href="#top"
-  class="back-to-top btn-icon"
-  aria-label="back to top"
-  data-back-top-btn
->
-  <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-</a>
+    <a
+      href="#top"
+      class="back-to-top btn-icon"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
 
-   <!-- Background Gradient  -->
-   <div class="body-bg-shape"></div>
+    <!-- Background Gradient  -->
+    <div class="body-bg-shape"></div>
 
     <!-- 
     - custom js link
