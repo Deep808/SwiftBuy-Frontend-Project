@@ -1624,22 +1624,13 @@
   
 
   /* -----------------------------------------About Us end ---------------------------------------- */
-  
-  
+
   .qrcode-section {
-<<<<<<< HEAD
     display: flex; 
     justify-content: center; 
     align-items: center; 
     text-align: center;
     margin-top: 5px; 
-=======
-    display: flex; /* Using flexbox for centering */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center;
-    margin-top: 5px; /* You can adjust this value */
->>>>>>> 55e475f21563166d12c298a2ad376d214c45ebd8
     margin-bottom:5px; 
 }
 
@@ -1648,13 +1639,8 @@
     background-color: #050505;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-<<<<<<< HEAD
     display: block; 
     width: fit-content; 
-=======
-    display: block; /* This changes from inline-block */
-    width: fit-content; /* This will ensure the width fits its content */
->>>>>>> 55e475f21563166d12c298a2ad376d214c45ebd8
     margin-bottom: 5px;
 }
 
@@ -1662,13 +1648,8 @@
     max-width: 200px;
     height: auto;
     margin-bottom: 10px;
-<<<<<<< HEAD
     display: block;
     margin-left: auto; 
-=======
-    display: block; /* This ensures it respects the center alignment */
-    margin-left: auto; /* Auto margins for left and right will center it */
->>>>>>> 55e475f21563166d12c298a2ad376d214c45ebd8
     margin-right: auto;
 }
 
