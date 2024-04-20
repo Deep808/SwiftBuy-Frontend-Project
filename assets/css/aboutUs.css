@@ -1620,7 +1620,27 @@
     font-size: 1rem;
     color: #0e2a03;
   }
-  
+
+  .qr-code-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc; /* Adjust styling as needed */
+    display: inline-block;
+}
+
+.qr-code-container img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.qr-code-container p {
+    font-size: 16px;
+    color: #333;
+}
+
+
   /* -----------------------------------------About Us end ---------------------------------------- */
   
   
