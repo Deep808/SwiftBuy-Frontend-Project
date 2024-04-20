@@ -1,3 +1,57 @@
+function adjustKeyLength(key) {
+    const encoder = new TextEncoder();
+    let encodedKey = encoder.encode(key);
+    if (encodedKey.byteLength < 16) {
+        // If less than 16 bytes, pad with zeros up to 16 bytes
+        let newKey = new Uint8Array(16);
+        newKey.set(encodedKey);
+        return newKey;
+    } else if (encodedKey.byteLength > 16 && encodedKey.byteLength < 32) {
+        // If between 16 and 32 bytes, pad to 32 bytes
+        let newKey = new Uint8Array(32);
+        newKey.set(encodedKey);
+        return newKey;
+    } else if (encodedKey.byteLength > 32) {
+        // If more than 32 bytes, truncate to 32 bytes
+        return encodedKey.slice(0, 32);
+    }
+    // If exactly 16 or 32 bytes, return as is
+    return encodedKey;
+}
+
+async function encryptPassword(password, secretKey) {
+    try {
+        console.log("Starting encryption process");
+        const iv = crypto.getRandomValues(new Uint8Array(12));
+        console.log("IV generated:", iv);
+
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password);
+        console.log("Password encoded");
+
+        //adjusting the length to make sure it is 128
+        let adjustedKey = adjustKeyLength(secretKey); 
+        console.log("Adjusted key length:", adjustedKey.byteLength);
+
+        const key = await crypto.subtle.importKey(
+            "raw",
+            adjustedKey,
+            { name: "AES-GCM" },
+            false,
+            ["encrypt"]
+        );
+        console.log("Key imported");
+
+        const encrypted = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, data);
+        console.log("Encryption successful");
+
+        return { encrypted: Array.from(new Uint8Array(encrypted)), iv: Array.from(iv) };
+    } catch (error) {
+        console.error("Encryption failed:", error);
+        throw new Error("Encryption failed");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("step-form");
     const steps = Array.from(document.querySelectorAll(".step"));
@@ -6,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentStep = 0;
 
 
-    // Set the maximum date input to today's date
+    // Setting the maximum date input to today's date
     const birthDateInput = document.getElementById('birth-date');
     if (birthDateInput) {
         birthDateInput.max = new Date().toISOString().split('T')[0];
@@ -75,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!isEmailUnique(emailInput.value)) {
                 alert("This email is already registered.");
-                return; // Stop the submission process
+                return; // Stoping the submission process
             }
             
             // Date of birth validation
@@ -104,9 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
         newUser.userId = `user${users.length + 1}`; 
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
-        localStorage.setItem('currentUser', JSON.stringify(newUser));    }
+        localStorage.setItem('currentUser', JSON.stringify(newUser));   
+    }
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
         // Extracting user info from form fields
         const email = document.getElementById('email').value;
@@ -115,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById('password').value; 
         const confirmPassword = document.getElementById('confirm-password').value;
         const termsCheckbox = document.getElementById('terms-checkbox');
-
     
         // Check password match right before form submission
         if (password.trim() !== confirmPassword.trim()) {
@@ -128,25 +182,29 @@ document.addEventListener("DOMContentLoaded", function () {
             return;  // Stop the function from proceeding to the next step
         }
     
+        //encryption of password 
+        try {
+            const secretKey = 'secret-key'; 
+            const { encrypted, iv } = await encryptPassword(password, secretKey);
+            console.log("Encrypted data and IV:", encrypted, iv);
 
-        // Storing user info in Local Storage
-        // Example usage:
-        let newUser = {
-            email,
-            firstName,
-            lastName,
-            password 
-        };
+            let newUser = {
+                email,
+                firstName,
+                lastName,
+                password: encrypted,
+                iv
+            };
 
-        registerUser(newUser);
-
+            registerUser(newUser);
+            alert("Signup successful!");
+            window.location.href = 'index.html';
+        } catch (error) {
+            console.error("Encryption or registration failed:", error);
+            alert("Failed to encrypt password or register user.");
+        }
     
-    
-        alert("Signup successful!");
-    
-        // Redirecting to login page or dashboard page
-        window.location.href = 'index.html';
-      });
+    });
     
     document.querySelectorAll(".next-btn").forEach((button) => {
         button.addEventListener("click", goToNextStep);
